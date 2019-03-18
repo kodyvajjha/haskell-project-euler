@@ -1,5 +1,4 @@
 import System.IO  
-import Data.Matrix          
 main =  do mx <- readFile"/home/kody/Scripts/Haskell/ProjectEuler/Prob11file.txt"  
            print(maximum $ leftprods (mx) ++ rightprods (mx) ++ upprods (mx) ++ downprods (mx) ++ diagleftprods(mx) ++ diagrightprods(mx))
            --print(cumleft 2 mx)
