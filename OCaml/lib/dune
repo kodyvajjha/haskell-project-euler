@@ -1,0 +1,4 @@
+(executable
+ (name prob18)
+ (public_name prob18)
+ (libraries containers))

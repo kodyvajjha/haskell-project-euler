@@ -1,14 +1,20 @@
-import System.IO  
+main :: IO ()
 main =  do mx <- readFile"/home/kody/Scripts/Haskell/ProjectEuler/Prob11file.txt"  
-           print(maximum $ leftprods (mx) ++ rightprods (mx) ++ upprods (mx) ++ downprods (mx) ++ diagleftprods(mx) ++ diagrightprods(mx))
+           print $ maximum $ leftprods mx ++ rightprods mx ++ upprods mx ++ downprods mx ++ diagleftprods mx ++ diagrightprods mx
            --print(cumleft 2 mx)
            --print(downprods mx)
+nums :: String -> [[Int]]
 nums a = map (map (\x -> read x :: Int) . words) $ lines a
+elems :: String -> (Int, Int) -> Int
 elems a (i,j) = (nums a) !! (i-1) !! (j-1)
 
+left :: Int -> String -> [Int]
 left i a = [elems a (i,j)  | j <- [1..20]]
+right :: Int -> String -> [Int]
 right i a = reverse $ left i a
+up :: Int -> String -> [Int]
 up j a = [elems a (i,j) | i <- [1..20]]
+down :: Int -> String -> [Int]
 down j a = reverse $ up j a 
 
 cumleft i a 
