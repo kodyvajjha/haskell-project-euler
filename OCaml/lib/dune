@@ -1,4 +1,4 @@
-(executable
- (name prob18)
- (public_name prob18)
+(executables
+ (names prob18 prob20)
+ (public_names prob18 prob20)
  (libraries containers))
