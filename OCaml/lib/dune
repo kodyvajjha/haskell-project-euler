@@ -1,4 +1,9 @@
 (executables
- (names prob17 prob18 prob19 prob20)
- (public_names prob17 prob18 prob19 prob20)
- (libraries containers))
+ (names prob17 prob18 prob19 prob20 prob21)
+ (public_names prob17 prob18 prob19 prob20 prob21)
+ (libraries containers zarith)
+ )
+
+(env
+  (dev
+    (flags (:standard -warn-error -A))))
